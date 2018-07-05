@@ -50,19 +50,17 @@
     //global variables
      var i = 1;
      var listItem = "";
-
      
-
     function processInput() {
     
     // if statement for if i is less than of equal to 5
       if (i <= 5) {
         listItem = "item" + i;
-        document.getElementById("toolBox").innerHTML = listItem;
-        document.getElementById("toolBox").innerHTML = "";
+        document.getElementById(listItem).innerHTML = document.getElementById("toolBox").value;
+        document.getElementById("toolBox").value = "";
       
       // nested if statement for if i is equal to 5
-        if (i = 5) {
+        if (i === 5) {
           document.getElementById("resultsFin").innerHTML = "Thanks for your suggestions."
         
         } // end of the nested if statement
@@ -72,7 +70,6 @@
       } // end of the first if statement
     
     } // end of the function processInput
-
   // Add an event listener to run processInout for when the submit button is clicked
     document.getElementById("button").addEventListener("click", processInput);
    </script>
